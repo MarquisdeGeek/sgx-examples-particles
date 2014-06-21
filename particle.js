@@ -68,7 +68,11 @@ function preset3(emitter) {
 
 
 function SGXPrepare_OS() {
-	sgx.filesystem.Engine.get().mountDirectory("sgx", "http://sgxengine.com/assets/sgx");
+	// Mounting allows you a lot of extra flexibility.
+	// The only thing it limits you to, is being required to load the resources from anywhere
+	// your own server. Normally, this is exactly what you want. For demo code, it's not
+	// so useful.
+	//sgx.filesystem.Engine.get().mountDirectory("sgx", "http://sgxengine.com/assets/sgx");
 
 	sgxskeleton.PrepareLoadingPage();
 
